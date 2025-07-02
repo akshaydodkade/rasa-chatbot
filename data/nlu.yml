@@ -1,29 +1,34 @@
 version: "3.1"
 
 nlu:
+- intent: book_meeting
+  examples: |
+    - book a meeting
+    - schedule a meeting
+    - can you book a meeting for [tomorrow](time)?
+    - arrange a meeting for [tomorrow at 3pm](time)
+    - set up a meeting on [Friday at 2pm](time)
+    - schedule a call for [next Monday](time)
+    - book a meeting at [10am tomorrow](time)
+    - arrange an appointment for [this afternoon](time)
+    - set up a meeting for [July 10th at 9am](time)
+    - schedule a meeting on [Wednesday morning](time)
+    - book a call for [next week](time)
+    - arrange a meeting at [4:30pm today](time)
+    - set up an appointment on [December 15th](time)
 - intent: greet
   examples: |
     - hi
     - hello
     - hey
     - good morning
-
 - intent: goodbye
   examples: |
     - bye
     - goodbye
     - see you later
-
 - intent: faq_purpose
   examples: |
     - what is your purpose?
     - what can you do?
     - who are you?
-
-- intent: book_meeting
-  examples: |
-    - book a meeting
-    - schedule a meeting
-    - can you book a meeting for tomorrow?
-    - arrange a meeting for [tomorrow](time)
-    - set up a meeting on [Friday at 2pm](time)

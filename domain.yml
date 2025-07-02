@@ -8,15 +8,15 @@ intents:
 
 responses:
   utter_greet:
-  - text: "Hello! How can I assist you today?"
+    - text: "Hello! How can I assist you today?"
   utter_goodbye:
-  - text: "Goodbye! Have a great day!"
+    - text: "Goodbye! Have a great day!"
   utter_purpose:
-  - text: "I'm a chatbot built to answer your questions and help with tasks like booking meetings!"
+    - text: "I’m a chatbot built to answer your questions and help with tasks like booking meetings!"
   utter_ask_time:
-  - text: "When would you like to book the meeting?"
+    - text: "When would you like to book the meeting?"
   utter_confirm_booking:
-  - text: "Meeting booked for {time}! Anything else I can help with?"
+    - text: "Meeting booked for {time}! Anything else I can help with?"
 
 actions:
   - action_book_meeting
@@ -28,6 +28,9 @@ slots:
     mappings:
       - type: from_entity
         entity: time
+      - type: from_text
+        intent: book_meeting
+        not_intent: [greet, goodbye, faq_purpose]
 
 session_config:
   session_expiration_time: 60
